@@ -1,6 +1,7 @@
-import React from "react";
+import {React, useState} from "react";
 
 function QuestionItem({ question }) {
+  const [isVisible, setIsVisible] = useState(true)
   const { id, prompt, answers, correctIndex } = question;
 
   const options = answers.map((answer, index) => (
@@ -8,6 +9,14 @@ function QuestionItem({ question }) {
       {answer}
     </option>
   ));
+
+  const handleClick = () => {
+    setIsVisible(!isVisible)}
+  
+
+  if (!isVisible) {
+    return null; 
+  }
 
   return (
     <li>
@@ -17,7 +26,7 @@ function QuestionItem({ question }) {
         Correct Answer:
         <select defaultValue={correctIndex}>{options}</select>
       </label>
-      <button>Delete Question</button>
+      <button onClick={handleClick}>Delete Question</button>
     </li>
   );
 }
