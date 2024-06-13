@@ -65,17 +65,6 @@
         "controlled"
       ],
       "correctIndex": 1
-    },
-    {
-      "prompt": "ffffffff",
-      "answers": [
-        "fffffffffff",
-        "ffffffffff",
-        "ffffffffff",
-        "ffffffffffffff"
-      ],
-      "correctIndex": 0,
-      "id": 7
     }
   ]
 }
